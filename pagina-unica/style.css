@@ -1,0 +1,121 @@
+/* === FONTES (Google Fonts) === */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;600&family=Merriweather:wght@400;700&display=swap');
+
+:root {
+  /* Cores principais */
+  --verde-salvia: #A8BBA2;
+  --bege-claro: #F2EFE9;
+  --rosa-cha: #E9CFCF;
+  --marrom-claro: #C2B1A0;
+  --branco: #FFFFFF;
+
+  /* Fontes */
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-texto: 'Merriweather', serif;
+  --fonte-destaque: 'Raleway', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  background-color: var(--bege-claro);
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--verde-salvia);
+}
+
+p, li {
+  font-family: var(--fonte-texto);
+  font-size: 1.1rem;
+}
+
+button, .cta {
+  background-color: var(--verde-salvia);
+  color: var(--branco);
+  font-family: var(--fonte-destaque);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover, .cta:hover {
+  background-color: var(--marrom-claro);
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero {
+  background: linear-gradient(to right, var(--bege-claro), var(--rosa-cha));
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.testimonial {
+  font-style: italic;
+  color: var(--marrom-claro);
+  margin: 20px 0;
+  border-left: 4px solid var(--verde-salvia);
+  padding-left: 16px;
+}
+.hero-image {
+  background-image: url('imagem-do-spa.jpg'); /* Substituir pelo caminho da minha imagem */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--branco);
+  text-align: center;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Camada escura para contraste */
+  z-index: 1;
+}
+
+.hero-texto {
+  position: relative;
+  z-index: 2;
+  font-family: var(--fonte-titulo);
+  padding: 0 20px;
+}
+
+.hero-texto h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-texto p {
+  font-size: 1.3rem;
+  font-family: var(--fonte-destaque);
+  margin-bottom: 2rem;
+}
+
+.hero-texto .cta {
+  background-color: var(--verde-salvia);
+  color: var(--branco);
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero-texto .cta:hover {
+  background-color: var(--marrom-claro);
+}
